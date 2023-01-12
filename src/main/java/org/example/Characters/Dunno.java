@@ -9,7 +9,7 @@ public class Dunno extends Shorty implements Assistable {
     }
 
     @Override
-    public void assist(Object person) {
-        System.out.print(name +" принялся помогать " + person);
+    public void assist(Shorty person) {
+        System.out.print(name +" принялся помогать " + person.dative());
     }
 }

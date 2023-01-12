@@ -1,6 +1,8 @@
 package org.example.Characters;
 
+import org.example.Interior.Interior;
+
 public interface Openable {
-    void open(Object o);
+    void open(Interior i);
 }
 

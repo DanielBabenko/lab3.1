@@ -10,7 +10,7 @@ public abstract class Noun {
         return (s == null || s.length() == 0) ? null : (s.substring(0, s.length() - 1));
     }
 
-    protected String genitive(){
+    public String genitive(){
         String n = this.name;
         String n1 = removeLastChar(n);
         int i = this.decline.ordinal();
@@ -22,7 +22,7 @@ public abstract class Noun {
         return n;
     }
 
-    protected String dative() {
+    public String dative() {
         String n = this.name;
         String n1 = removeLastChar(n);
         int i = this.decline.ordinal();
@@ -34,7 +34,7 @@ public abstract class Noun {
         return n;
     }
 
-    protected String accusative() {
+    public String accusative() {
         String n = this.name;
         String n1 = removeLastChar(n);
         int i = this.decline.ordinal();
@@ -52,7 +52,7 @@ public abstract class Noun {
         return n;
     }
 
-    protected String creative() {
+    public String creative() {
         String n = this.name;
         String n1 = removeLastChar(n);
         int i = this.decline.ordinal();
@@ -64,7 +64,7 @@ public abstract class Noun {
         return n;
     }
 
-    protected String prepositional() {
+    public String prepositional() {
         String n = this.name;
         String n1 = removeLastChar(n);
         int i = this.decline.ordinal();

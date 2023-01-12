@@ -1,5 +1,6 @@
 package org.example.AbsractNouns;
 
+import org.example.Interior.Interior;
 import org.example.Participles;
 
 public class Loud extends AbstractNouns {
@@ -12,7 +13,7 @@ public class Loud extends AbstractNouns {
         System.out.print(state + " нарастал");
     }
 
-    public void volume(Participles p, Object o){
-        System.out.print(state + p+ o.toString().toLowerCase()+" нарастал");
+    public void volume(Participles p, Interior i){
+        System.out.print(state + p+ i.creative().toLowerCase()+" нарастал");
     }
 }

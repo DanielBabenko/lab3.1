@@ -1,25 +1,24 @@
 package org.example.Characters;
 
+import org.example.Interior.Interior;
 import org.example.Noun;
 import org.example.Participles;
+import org.example.Things.Thing;
 
 public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieable, Bindable, Descentable {
-    @Override
-    public void run(Object o) {
-        System.out.print(name + " подбежал к "+ o);
+
+
+    public void open(Interior i) {
+        System.out.print(" распахнул " + i);
     }
 
-    public void open(Object o) {
-        System.out.print(" распахнул " + o);
-    }
-
-    public void take(Object box, Object thing) {
-        System.out.print(name + " достал из " + box + " " + thing);
+    public void take(Interior box, String thing) {
+        System.out.print(name + " достал из " + box.genitive() + " " + thing);
     }
 
     @Override
-    public void bind(Object o) {
-        System.out.print(" начал связывать " + o + " между собой");
+    public void bind(String thing) {
+        System.out.print(" начал связывать " + thing + " между собой");
     }
 
     @Override
@@ -28,8 +27,11 @@ public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieabl
     }
 
     @Override
-    public void tie(Object rope, Object pole) {
-        System.out.print(" привязал " + rope + " к " + pole);
+    public void tie(String rope, Interior pole) {
+        System.out.print(" привязал " + rope + " к " + pole.dative());
     }
+
+    @Override
+    public void run(Interior i) {System.out.print(name + " подбежал к "+ i.dative());}
 }
 

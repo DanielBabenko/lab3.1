@@ -1,5 +1,7 @@
 package org.example.Characters;
 
+import org.example.Interior.Interior;
+
 public interface Runnable {
-    void run(Object o);
+    void run(Interior n);
 }

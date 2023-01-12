@@ -42,7 +42,7 @@ public class Main {
         Tube tube = new Tube("парового отопления");
 
         participles(Participles.THOUGHTLESS);
-        kozlik.run(w.dative());
+        kozlik.run(w);
         link(0);
         kozlik.open(w);
         endQuote();
@@ -51,16 +51,16 @@ public class Main {
         link(0);
         participles(Participles.ENSURED);
         participles(Participles.JUMPDOWN);
-        kozlik.take(chest.genitive(),rope.ropePart(Rope.RopeParts.CUTS));
+        kozlik.take(chest,rope.ropePart(Rope.RopeParts.CUTS));
         link(0);
         kozlik.bind(rope.ropePart(Rope.RopeParts.CUTS));
         endQuote();
 
-        dunno.assist(kozlik.dative());
+        dunno.assist(kozlik);
         endQuote();
 
         participles(Participles.MEANWHILE);
-        loud.volume(Participles.BEHIND,door.creative());
+        loud.volume(Participles.BEHIND,door);
         endQuote();
 
         door.shake(Participles.BEATEN);
@@ -72,7 +72,7 @@ public class Main {
         quiet.volume();
         endQuote();
 
-        crowd.volume(Participles.BEHIND,door.creative());
+        crowd.volume(Participles.BEHIND,door);
         endQuote();
 
         participles(Participles.LEANED);
@@ -82,7 +82,7 @@ public class Main {
         participles(Participles.ENSURED);
         rope.descent(rope.ropePart(Rope.RopeParts.END),Participles.GROUND);
         comma();
-        kozlik.tie(rope.ropePart(Rope.RopeParts.OTHER),tube.dative());
+        kozlik.tie(rope.ropePart(Rope.RopeParts.OTHER),tube);
         tube.getAdj();
         endQuote();
     }

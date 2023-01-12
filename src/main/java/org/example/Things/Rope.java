@@ -19,6 +19,11 @@ public class Rope extends Thing implements Descentable {
         private RopeParts(String part){
             this.part = part;
         }
+
+        @Override
+        public String toString() {
+            return part;
+        }
     }
 
     public String ropePart(RopeParts part){
