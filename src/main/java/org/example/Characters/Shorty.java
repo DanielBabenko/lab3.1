@@ -17,7 +17,7 @@ public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieabl
     }
 
     @Override
-    public void bind(String thing) {
+    public void bind(Object thing) {
         System.out.print(" начал связывать " + thing + " между собой");
     }
 
