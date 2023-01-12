@@ -5,7 +5,6 @@ import org.example.Noun;
 import java.util.Objects;
 
 public abstract class Thing extends Noun {
-    String name;
 
     @Override
     public String toString() {
