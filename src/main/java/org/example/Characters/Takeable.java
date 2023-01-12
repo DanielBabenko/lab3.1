@@ -5,5 +5,5 @@ import org.example.Noun;
 import org.example.Things.Thing;
 
 public interface Takeable {
-    void take(Interior box, String thing);
+    void take(Interior box, Object thing);
 }

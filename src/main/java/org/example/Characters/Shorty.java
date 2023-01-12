@@ -12,7 +12,7 @@ public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieabl
         System.out.print(" распахнул " + i);
     }
 
-    public void take(Interior box, String thing) {
+    public void take(Interior box, Object thing) {
         System.out.print(name + " достал из " + box.genitive() + " " + thing);
     }
 
@@ -27,7 +27,7 @@ public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieabl
     }
 
     @Override
-    public void tie(String rope, Interior pole) {
+    public void tie(Object rope, Interior pole) {
         System.out.print(" привязал " + rope + " к " + pole.dative());
     }
 
