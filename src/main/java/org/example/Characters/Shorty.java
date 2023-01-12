@@ -4,7 +4,6 @@ import org.example.Noun;
 import org.example.Participles;
 
 public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieable, Bindable, Descentable {
-
     @Override
     public void run(Object o) {
         System.out.print(name + " подбежал к "+ o);
