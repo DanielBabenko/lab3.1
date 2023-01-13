@@ -1,4 +1,4 @@
-package org.example.AbsractNouns;
+package org.example.AbstractNouns;
 
 public class Quiet extends AbstractNouns {
 

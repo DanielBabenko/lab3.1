@@ -1,8 +1,8 @@
 package org.example;
 
-import org.example.AbsractNouns.Crowd;
-import org.example.AbsractNouns.Loud;
-import org.example.AbsractNouns.Quiet;
+import org.example.AbstractNouns.Crowd;
+import org.example.AbstractNouns.Loud;
+import org.example.AbstractNouns.Quiet;
 import org.example.Characters.Dunno;
 import org.example.Characters.Kozlik;
 import org.example.Interior.Chest;

@@ -1,4 +1,4 @@
-package org.example.AbsractNouns;
+package org.example.AbstractNouns;
 
 import org.example.Interior.Interior;
 import org.example.Participles;
