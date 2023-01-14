@@ -9,6 +9,8 @@ import org.example.Interior.Chest;
 import org.example.Interior.Door;
 import org.example.Interior.Tube;
 import org.example.Interior.Window;
+import org.example.Places.OfficeBuilding;
+import org.example.Places.Place;
 import org.example.Things.Rope;
 
 public class Main {
@@ -30,6 +32,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        OfficeBuilding office = new OfficeBuilding();
+        //OfficeBuilding.Office o = office.new Office();
+
+        OfficeBuilding hall = new OfficeBuilding("коридор",Decline.SECOND);
+
         Kozlik kozlik = new Kozlik();
         Dunno dunno = new Dunno();
         Window w = new Window();
@@ -41,7 +49,9 @@ public class Main {
         Crowd crowd = new Crowd();
         Tube tube = new Tube("парового отопления");
 
-        kozlik.run(w);
+        crowd.breakThrough(office);
+        link(0);
+        crowd.run(Participles.THROUGH, hall);
         endQuote();
 
         participles(Participles.THOUGHTLESS);

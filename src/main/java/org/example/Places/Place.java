@@ -1,5 +1,10 @@
 package org.example.Places;
 
-public class Place {
+import org.example.Noun;
 
+public abstract class Place extends Noun {
+    @Override
+    public String toString(){
+        return name;
+    }
 }

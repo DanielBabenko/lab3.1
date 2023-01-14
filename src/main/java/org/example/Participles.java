@@ -6,6 +6,7 @@ public enum Participles {
     ENSURED(" убедившись, что "),
     BEHIND(" за "),
     NEAR(" возле "),
+    THROUGH(" по "),
     MEANWHILE("Между тем "),
     JUMPDOWN("прыгать с высоты третьего этажа небезопасно, "),
     UNEXPECTED("Неожиданно"),
