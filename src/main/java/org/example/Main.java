@@ -41,6 +41,9 @@ public class Main {
         Crowd crowd = new Crowd();
         Tube tube = new Tube("парового отопления");
 
+        kozlik.run(w);
+        endQuote();
+
         participles(Participles.THOUGHTLESS);
         kozlik.run(w);
         link(0);
