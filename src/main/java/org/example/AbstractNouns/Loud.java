@@ -16,4 +16,16 @@ public class Loud extends AbstractNouns {
     public void volume(Participles p, Interior i){
         System.out.print(state + p+ i.creative().toLowerCase()+" нарастал");
     }
+
+    public void tapVolume(){
+        class Tap implements VolumeChange{
+            String state = "топот ног";
+            @Override
+            public void volume() {
+                System.out.print(" послышался " +state);
+            }
+        }
+        Tap tap = new Tap();
+        tap.volume();
+    }
 }

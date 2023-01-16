@@ -7,6 +7,7 @@ public class Rope extends Thing implements Descentable {
     @Override
     public void descent(Object o, Participles p) {
         System.out.print(o + " достаёт "+p);
+
     }
 
     public enum RopeParts {

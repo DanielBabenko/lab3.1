@@ -3,7 +3,6 @@ package org.example.AbstractNouns;
 import org.example.Characters.Runnable;
 import org.example.Interior.Interior;
 import org.example.Participles;
-import org.example.Places.OfficeBuilding;
 import org.example.Places.Place;
 
 public class Crowd extends AbstractNouns implements Runnable,BreakTrough{
@@ -11,11 +10,6 @@ public class Crowd extends AbstractNouns implements Runnable,BreakTrough{
     String members;
     public Crowd(){
         this.state = "Толпа";
-    }
-
-    public Crowd(String members){
-        this.members = members;
-        this.state = "Толпа"+ " " + removeLastChar(members) + "ов";
     }
 
     @Override
@@ -29,25 +23,59 @@ public class Crowd extends AbstractNouns implements Runnable,BreakTrough{
 
     @Override
     public void run(Interior i) {
-        System.out.print(state + " бежала");
-    }
-    Crowd stockholders = new Crowd("акционеры"){
-        public void run(Participles p, OfficeBuilding place) {
-            System.out.print(" бежала" + p + place.dative());
-        }
-
-        public void breakThrough(Place place) {
-            System.out.print(state + " прорвалась в " + place);
-        }
-    };
-
-    public void run(Participles p, OfficeBuilding place) {
-        stockholders.run(p,place);
+        System.out.print(" бежала за "+i.creative());
     }
 
     @Override
-    public void breakThrough(Place place) {
-        stockholders.breakThrough(place);
+    public void breakThrough(Place place) {}
+
+    public class Stockholders {
+        public Stockholders(String members){
+            Crowd.this.members = members;
+            Crowd.this.state = "Толпа"+ " " + removeLastChar(members) + "ов";
+        }
+        public void breakThrough(Place place) {
+            System.out.print(state+" прорвалась в "+place);
+        }
+
+        public void run(Place place) {
+            System.out.print(" бежала по "+place.dative());
+        }
+
+    }
+
+    public static class Owners implements Knockable,VolumeChange{
+        private static String status;
+        private boolean knocking;
+        private boolean shouting;
+        public Owners(){
+            status = "владельцы гигантских акций";
+        }
+
+        @Override
+        public String toString() {
+            return status;
+        }
+
+        @Override
+        public void knock(Interior i) {
+            System.out.print(status+ " принялись стучать кулаками в дверь");
+            knocking = true;
+        }
+
+        @Override
+        public void volume() {
+            System.out.println(" стали кричать.");
+            shouting = true;
+        }
+
+        public boolean areKnocking() {
+            return knocking;
+        }
+
+        public boolean areShouting() {
+            return shouting;
+        }
     }
 }
 

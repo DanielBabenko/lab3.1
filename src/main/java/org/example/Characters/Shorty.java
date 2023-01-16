@@ -3,9 +3,9 @@ package org.example.Characters;
 import org.example.Interior.Interior;
 import org.example.Noun;
 import org.example.Participles;
-import org.example.Things.Thing;
+import org.example.Places.Place;
 
-public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieable, Bindable, Descentable {
+public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieable, Bindable, Descentable, Jumpable {
 
 
     public void open(Interior i) {
@@ -33,5 +33,10 @@ public class Shorty extends Noun implements Runnable, Openable, Takeable, Tieabl
 
     @Override
     public void run(Interior i) {System.out.print(name + " подбежал к "+ i.dative());}
+
+    @Override
+    public void jump(Place p) {
+        System.out.print(name+" подскочил к "+p.dative());
+    }
 }
 

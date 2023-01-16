@@ -1,7 +1,9 @@
 package org.example;
 
 public enum Participles {
-    THOUGHTLESS("Hедолго думая "),
+    INTIME(", что было сделано вовремя, "),
+    CAUSE("так как в то же мгновение"),
+    THOUGHTLESS("недолго думая "),
     LOOKDOWN("Глянув вниз"),
     ENSURED(" убедившись, что "),
     BEHIND(" за "),
@@ -13,6 +15,7 @@ public enum Participles {
     BACKYARD("во двор"),
     BEATEN(" под ударами "),
     GROUND("до земли"),
+    REACH("Подбежав к конторе, "),
     LEANED("Высунувшись из окна, ");
 
     String participle;
