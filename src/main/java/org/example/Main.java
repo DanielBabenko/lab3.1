@@ -34,7 +34,11 @@ public class Main {
         OfficeBuilding office = new OfficeBuilding();
         OfficeBuilding hall = new OfficeBuilding(){};
         hall.rename("коридор");
-        OfficeBuilding o = new OfficeBuilding(){};
+        OfficeBuilding o = new OfficeBuilding(){
+            private void changeDecline(){
+                this.decline = Decline.FIRST;
+            }
+        };
         o.rename("контора");
         OfficeBuilding exit = new OfficeBuilding(){};
         exit.rename("выход");
