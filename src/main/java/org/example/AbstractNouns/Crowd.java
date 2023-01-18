@@ -5,7 +5,7 @@ import org.example.Interior.Interior;
 import org.example.Participles;
 import org.example.Places.Place;
 
-public class Crowd extends AbstractNouns implements Runnable,BreakTrough{
+public class Crowd extends AbstractNouns implements Runnable,BreakThrough{
 
     String members;
     public Crowd(){
