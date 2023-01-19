@@ -76,6 +76,8 @@ public class Main {
         owners.knock(door);
         link(0);
         owners.volume();
+        //owners.goAway();
+        endQuote();
 
         try {
             kozlik.makePlan(owners);

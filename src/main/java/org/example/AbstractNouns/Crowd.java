@@ -65,8 +65,14 @@ public class Crowd extends AbstractNouns implements Runnable,BreakThrough{
 
         @Override
         public void volume() {
-            System.out.println(" стали кричать.");
+            System.out.print(" стали кричать");
             shouting = true;
+        }
+
+        public void goAway(){
+            System.out.print(" ... и ушли");
+            shouting = false;
+            knocking = false;
         }
 
         public boolean areKnocking() {
